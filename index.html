@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Zakat Calculator</h1>
+        <p class="subtitle">Calculate your annual zakat easily and accurately.</p>
+
+        <div class="card">
+            <h2>Assets</h2>
+
+            <label>Cash & Savings</label>
+            <input type="number" id="cash" placeholder="Enter amount">
+
+            <label>Business Inventory</label>
+            <input type="number" id="inventory" placeholder="Enter amount">
+
+            <label>Gold & Silver</label>
+            <input type="number" id="gold" placeholder="Enter amount">
+
+            <label>Investments</label>
+            <input type="number" id="investments" placeholder="Enter amount">
+
+            <label>Money Owed To You</label>
+            <input type="number" id="owed" placeholder="Enter amount">
+        </div>
+
+        <div class="card">
+            <h2>Liabilities</h2>
+
+            <label>Debts / Money You Owe</label>
+            <input type="number" id="liabilities" placeholder="Enter amount">
+        </div>
+
+        <div class="card">
+            <h2>Nisab</h2>
+
+            <label>Nisab Value (editable)</label>
+            <input type="number" id="nisab" value="64000">
+        </div>
+
+        <button onclick="calculateZakat()" class="btn">Calculate Zakat</button>
+
+        <div class="card result">
+            <h2>Results</h2>
+            <p id="totalAssets">Total Assets: -</p>
+            <p id="totalLiabilities">Total Liabilities: -</p>
+            <p id="netWealth">Net Zakatable Wealth: -</p>
+            <p id="zakatDue">Zakat Due: -</p>
+            <p id="status" class="status"></p>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
