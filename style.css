@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease-in-out;
+}
+
+:root {
+  --bg: #f4f2ec;
+  --text: #222;
+  --card: #ffffff;
+  --accent: #1a734d; /* Islamic green */
+}
+
+.dark {
+  --bg: #1b1f24;
+  --text: #f1f1f1;
+  --card: #2a2f35;
+  --accent: #6ecf9f;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: var(--accent);
+  color: white;
+  position: relative;
+}
+
+.theme-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: white;
+  color: var(--accent);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.card, .info-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.calc-btn {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ad0600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  opacity: 0.7;
+  font-size: 14px;
+}

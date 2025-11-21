@@ -1,63 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakat Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakat Calculator</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Zakat Calculator</h1>
-        <p class="subtitle">Calculate your annual zakat easily and accurately.</p>
+  <header>
+    <h1>Zakat Calculator</h1>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+  </header>
 
-        <div class="card">
-            <h2>Assets</h2>
+  <div class="container">
 
-            <label>Cash & Savings</label>
-            <input type="number" id="cash" placeholder="Enter amount">
+    <div class="card">
+      <h2>Calculate Your Zakat</h2>
 
-            <label>Business Inventory</label>
-            <input type="number" id="inventory" placeholder="Enter amount">
+      <label>Cash on Hand / Bank</label>
+      <input type="number" id="cash" placeholder="Enter amount">
 
-            <label>Gold & Silver</label>
-            <input type="number" id="gold" placeholder="Enter amount">
+      <label>Gold Value (in Birr)</label>
+      <input type="number" id="gold" placeholder="Gold total value">
 
-            <label>Investments</label>
-            <input type="number" id="investments" placeholder="Enter amount">
+      <label>Silver Value (in Birr)</label>
+      <input type="number" id="silver" placeholder="Silver total value">
 
-            <label>Money Owed To You</label>
-            <input type="number" id="owed" placeholder="Enter amount">
-        </div>
+      <label>Business Assets</label>
+      <input type="number" id="business" placeholder="Enter amount">
 
-        <div class="card">
-            <h2>Liabilities</h2>
+      <label>Money Owed to You</label>
+      <input type="number" id="owed" placeholder="Enter amount">
 
-            <label>Debts / Money You Owe</label>
-            <input type="number" id="liabilities" placeholder="Enter amount">
-        </div>
+      <label>Debts You Owe</label>
+      <input type="number" id="debt" placeholder="Enter amount">
 
-        <div class="card">
-            <h2>Nisab</h2>
+      <button class="calc-btn" onclick="calculateZakat()">Calculate Zakat</button>
+      <button class="reset-btn" onclick="resetForm()">Reset</button>
 
-            <label>Nisab Value (editable)</label>
-            <input type="number" id="nisab" value="64000">
-        </div>
-
-        <button onclick="calculateZakat()" class="btn">Calculate Zakat</button>
-
-        <div class="card result">
-            <h2>Results</h2>
-            <p id="totalAssets">Total Assets: -</p>
-            <p id="totalLiabilities">Total Liabilities: -</p>
-            <p id="netWealth">Net Zakatable Wealth: -</p>
-            <p id="zakatDue">Zakat Due: -</p>
-            <p id="status" class="status"></p>
-        </div>
-
+      <h3 id="result">Zakat: 0 Birr</h3>
     </div>
 
-<script src="script.js"></script>
+    <div class="info-card">
+      <h2>About Zakat</h2>
+      <p>Zakat is 2.5% of your total savings and wealth held for one full lunar year.</p>
+      <p>This calculator helps determine if you have reached the Nisab threshold.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Made with ❤️ | Juwera</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
